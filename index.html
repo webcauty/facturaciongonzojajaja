@@ -123,10 +123,11 @@ body{
 }
 
 .logo-box img{
-  width:95px;
+  width:110px;
   background:white;
   padding:10px;
   border-radius:16px;
+  transition:0.3s;
 }
 
 .logo-box h1{
@@ -135,6 +136,13 @@ body{
 
 .logo-box p{
   font-size:15px;
+}
+
+.nit-label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
 }
 
 .contacto-wsp{
@@ -360,6 +368,8 @@ button{
 
 }
 
+/* IMPRESIÓN */
+
 @media print{
 
   body{
@@ -374,6 +384,7 @@ button{
   .factura{
     box-shadow:none;
     border-radius:0;
+    max-width:100%;
   }
 
   .botones{
@@ -395,6 +406,32 @@ button{
     color:#155724 !important;
     print-color-adjust:exact;
     -webkit-print-color-adjust:exact;
+  }
+
+  /* LOGO MÁS GRANDE AL IMPRIMIR */
+
+  .logo-box img{
+    width:180px !important;
+    padding:14px;
+    border-radius:22px;
+  }
+
+  .logo-box h1{
+    font-size:42px;
+  }
+
+  .logo-box p{
+    font-size:18px;
+  }
+
+  .contacto-wsp{
+    font-size:16px;
+    padding:12px 18px;
+  }
+
+  .header{
+    padding:35px;
+    align-items:center;
   }
 
 }
@@ -449,8 +486,8 @@ alt="Logo">
 <div>
 
 <h1>VíaExpress</h1>
-
 <p>Factura de Envío Editable</p>
+<span class="nit-label">NIT 901509697-8</span>
 
 <div class="contacto-wsp">
 
@@ -628,7 +665,7 @@ Total: $
 <p>
 Gracias por confiar en VíaExpress Colombia 🚚
 </p>
-
+<p>CALLE 23 A N 10 73 Casanare</p>
 <p>
 Sistema de facturación y envíos nacionales
 </p>
